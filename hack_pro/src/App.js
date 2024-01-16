@@ -13,8 +13,15 @@ function App() {
 
 
   return(
-    /*backgroundImage:"url('https://shorturl.at/hixI7')",backgroundSize:'cover',backgroundRepeat:'no repeat',minHeight: '100vh',}}*/
-    <div className='App'>      
+    <div className='App' style={{
+      /* 1)'https://img.freepik.com/premium-photo/computer-hacker-hoodie-hood-obscured-dark-face-data-thief-spy-internet-fraud-cyber-security_226666-565.jpg?w=826*/
+      backgroundImage: "url('https://img.freepik.com/premium-photo/computer-hacker-hoodie-hood-obscured-dark-face-data-thief-spy-internet-fraud-cyber-security_226666-565.jpg?w=826')",
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'fixed',
+      backgroundPosition: 'center',
+      minHeight: '100vh',
+    }}>
       <h1 style={{textAlign:'center',backgroundColor:'blue'}}>Hacking Tools</h1>
 
       {/*EvilLimiter*/}
@@ -105,29 +112,30 @@ SSH =>1)sudo hydra -l molly -P /usr/share/wordlists/rockyou.txt <ip> -t 4 ssh
 
       {/*  Tricks */}
       <div style={{textAlign:'left',paddingLeft:'20px',}}>
-        <h3>Tricks</h3>
-        <h4>1)Hide content in images(Steghide)</h4>
-        <h5>.....steghide embed -ef res.txt -cf input.jpg -sf out.jpg</h5>
-        <h5>.....Extraction:steghide extract -sf out.jpg</h5>
-        <h4>2)Slow target's browser</h4>
-        <h5>nmap --script http-slowloris ip,install from git (slowloris)Last:-perl slowloris.pl -dns ip Linux inbuilt:sudo hping3 ip -1 --fast</h5>
-        <h4> Convert imges to sequential video</h4>
-        <h5>ffmpeg -framerate 0.5 -i ~/testimg/%d.jpg -vf "scale=512:-2" -c:v libx264 -pix_fmt yuv420p realone.mp4</h5>
-        <h4>File Location- readlink -f abcd.txt</h4>
+        <h1>Tricks</h1>
+        <h1 style={{color:'Yellow'}}>1)Hide content in images(Steghide)</h1>
+        <h2 style={{color:'white'}}>.....steghide embed -ef res.txt -cf input.jpg -sf out.jpg</h2>
+        <h2 style={{color:'white'}}>.....Extraction:steghide extract -sf out.jpg</h2>
+        <h1 style={{color:'Yellow'}}>2)Slow target's browser</h1>
+        <h2 style={{color:'white'}}>.....nmap --script http-slowloris ip,install from git (slowloris)Last:-perl slowloris.pl -dns ip Linux inbuilt:sudo hping3 ip -1 --fast</h2>
+        <h1 style={{color:'Yellow'}}>3)Convert images to sequential video</h1>
+        <h2 style={{color:'white'}}>.....ffmpeg -framerate 0.5 -i ~/testimg/%d.jpg -vf "scale=512:-2" -c:v libx264 -pix_fmt yuv420p realone.mp4</h2>
+        <h1 style={{color:'Yellow'}}>4)File Location- </h1>
+        <h2 style={{color:'white'}}>.....readlink -f abcd.txt</h2>
       </div>
 
       <div style={{display:'flex',alignItems:'center'}}>
         <button onClick={()=>setShowBtni(!showBtni)} style={{alignSelf:'flex-start',background:'none',border:'none',cursor:'pointer',padding:0}}>
         <img src='https://media.istockphoto.com/id/848929150/vector/cartoon-bomb-drawing.jpg?s=612x612&w=0&k=20&c=m2TqYcCF7DXelKo9NC28-4sceo4ulgloqqmCBhabobE=' width='300' height='200' style={{display:'block'}} alt=""/>
         </button>
-        {showBtni&&(<p style={{padding:'30px'}}>:&#40;&#41;&#123; :|: &amp; &#125;;:</p>)}
+        {showBtni&&(<h2 style={{padding:'30px',color:'yellow'}}>:&#40;&#41;&#123; :|: &amp; &#125;;:</h2>)}
       </div>
 
 
 
 
       {/* Utilities */}
-      <div>
+      <div style={{color:'darkgray'}}>
         <h1>Utilities</h1>
         <h2>hollywood</h2>
         <h2>Sudocabulary(New word meaning everytime)</h2>
