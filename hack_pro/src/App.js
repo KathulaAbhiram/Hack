@@ -111,6 +111,9 @@ SSH =>1)sudo hydra -l molly -P /usr/share/wordlists/rockyou.txt <ip> -t 4 ssh
         <h5>.....Extraction:steghide extract -sf out.jpg</h5>
         <h4>2)Slow target's browser</h4>
         <h5>nmap --script http-slowloris ip,install from git (slowloris)Last:-perl slowloris.pl -dns ip Linux inbuilt:sudo hping3 ip -1 --fast</h5>
+        <h4> Convert imges to sequential video</h4>
+        <h5>ffmpeg -framerate 0.5 -i ~/testimg/%d.jpg -vf "scale=512:-2" -c:v libx264 -pix_fmt yuv420p realone.mp4</h5>
+        <h4>File Location- readlink -f abcd.txt</h4>
       </div>
 
       <div style={{display:'flex',alignItems:'center'}}>
